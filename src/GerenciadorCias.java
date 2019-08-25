@@ -37,7 +37,7 @@
         //}
         
         public ArrayList<CiaAerea> listarTodas(){
-        ArrayList<CiaAerea> aux = new ArrayList<>;
+        ArrayList<CiaAerea> aux = new ArrayList<CiaAerea>();
             for (CiaAerea cia: empresas){
             aux.add(cia);
             }
