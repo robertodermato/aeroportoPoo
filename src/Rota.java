@@ -26,4 +26,8 @@ public class Rota {
     public Aeronave getAeronave() {
         return aeronave;
     }
+
+    public String toString(){
+        return "CiaAérea: " + cia + " Origem: " + origem + " Destino: " + destino + " Aeronave: " + aeronave;
+    }
 }

@@ -14,4 +14,8 @@ public class Aeronave {
     public String getDescricao() {
         return descricao;
     }
+
+    public String toString(){
+        return "Código: " + codigo + " Descrição: " + descricao;
+    }
 }

@@ -4,7 +4,7 @@
         private ArrayList<CiaAerea> empresas;
 
         public GerenciadorCias() {
-            empresas = new ArrayList<>();
+            empresas = new ArrayList<CiaAerea>();
         }
 
         public void inserir (CiaAerea cia){
@@ -44,9 +44,6 @@
             return aux;
         }
 
-        public ArrayList<CiaAerea> listarTodas(){
-          return new ArrayList<>(empresas);
-        }
     }
 
 
