@@ -28,13 +28,13 @@
             return null;
         }
 
-        //public ArrayList<CiaAerea> listarTodas(){
-        //    ArrayList<CiaAerea> aux = new ArrayList<CiaAerea>();
-        //    for (int pos=0; pos < empresas.size(); pos++){
-        //        aux.add(empresas.get(pos));
-        //    }
-        //    return aux;
-        //}
+        public ArrayList<CiaAerea> listarTodas(){
+            ArrayList<CiaAerea> aux = new ArrayList<CiaAerea>();
+            for (int pos=0; pos < empresas.size(); pos++){
+                aux.add(empresas.get(pos));
+            }
+            return aux;
+        }
         
         //public ArrayList<CiaAerea> listarTodas(){
         //ArrayList<CiaAerea> aux = new ArrayList<CiaAerea>();
