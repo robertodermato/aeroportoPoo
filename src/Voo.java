@@ -20,6 +20,8 @@ public abstract class Voo {
         this.status = Status.CONFIRMADO; // default é confirmado
     }
 
+    public abstract Rota getRota();
+
     // método removido, pois não é mais util aqui
     //public Rota getRota() {
     //    return rota;
@@ -28,6 +30,8 @@ public abstract class Voo {
     public LocalDateTime getDatahora() {
         return datahora;
     }
+
+    public abstract Duration getDuracao();
 
     // método removido, pois não é mais util aqui, pois será calculado
     //public Duration getDuracao() {
