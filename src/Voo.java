@@ -1,33 +1,38 @@
 import java.time.Duration;
 import java.time.LocalDateTime;
 
-public class Voo {
+//A Classe Voo é abstrata, ou seja, não pode-se criar objetos do tipo dela,
+// mas pode-se fazer como é feito na App chmar de forma estática a classe
+// e criar de forma dinâmica uma instanceof VooVariasEscalas
+public abstract class Voo {
 
     public enum Status { CONFIRMADO, ATRASADO, CANCELADO };
 
     private LocalDateTime datahora;
-    private Duration duracao;
-    private Rota rota;
+    // private Duration duracao; - será calculado
+    // private Rota rota; não é mais útil nessa classe
     private Status status;
 
-    public Voo(Rota rota, LocalDateTime datahora, Duration duracao) {
-        this.rota = rota;
+    public Voo(LocalDateTime datahora) {
+        //this.rota = rota;
         this.datahora = datahora;
-        this.duracao = duracao;
+        //this.duracao = duracao;
         this.status = Status.CONFIRMADO; // default é confirmado
     }
 
-    public Rota getRota() {
-        return rota;
-    }
+    // método removido, pois não é mais util aqui
+    //public Rota getRota() {
+    //    return rota;
+    //}
 
     public LocalDateTime getDatahora() {
         return datahora;
     }
 
-    public Duration getDuracao() {
-        return duracao;
-    }
+    // método removido, pois não é mais util aqui, pois será calculado
+    //public Duration getDuracao() {
+    //    return duracao;
+    //}
 
     public Status getStatus() {
         return status;
@@ -39,6 +44,6 @@ public class Voo {
 
     @Override
     public String toString(){
-        return "Rota: " + rota + " Data: " + datahora + " Duração: " + duracao + " Status: " + status;
+        return " Data: " + datahora + " Status: " + status;
     }
 }

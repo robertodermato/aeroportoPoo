@@ -41,10 +41,18 @@ public class AppAeroporto {
         LocalDateTime datahora = LocalDateTime.of(2019, 9, 7, 5, 30);
         Duration duracao = Duration.ofMinutes(120); // 2 horas
 
-        VooVariasEscalas vooTeste = new VooVariasEscalas(origem, datahora, duracao);
-        vooTeste.addRota(destino);
+        // Testando polimorfismo. Pode-se declarar o vooTeste como sendo Voo do tipo VooVariasEscalas,
+        // para usar-se o método específico da classe VooVariasEscalas tem-se que fazer o casting.
+        // A variável vooTeste é polimórifca, pois pode referencias um objeto da classe Voo ou da classe VooVariasEscalas
+        Voo vooTeste = new VooVariasEscalas(origem, datahora, duracao);
+        ((VooVariasEscalas) vooTeste).addRota(destino);
 
         System.out.print (vooTeste);
+
+        //Testando classe GerenciadorVoos
+        GerenciadorVoos gerVoos = new GerenciadorVoos();
+        gerVoos.adicionar(vooTeste);
+
 
     }
 
