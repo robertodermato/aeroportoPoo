@@ -31,7 +31,7 @@ public abstract class Voo {
         return datahora;
     }
 
-    public abstract Duration getDuracao();
+    //public abstract Duration getDuracao();
 
     // método removido, pois não é mais util aqui, pois será calculado
     //public Duration getDuracao() {
@@ -48,6 +48,6 @@ public abstract class Voo {
 
     @Override
     public String toString(){
-        return " Data: " + datahora + " Status: " + status;
+        return "Data: " + datahora + "\nStatus: " + status;
     }
 }
