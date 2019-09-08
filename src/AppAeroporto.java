@@ -17,12 +17,14 @@ public class AppAeroporto {
         cias.inserir(c2);
         cias.inserir(c3);
 
+        // for each das cias
         for (CiaAerea c: cias.getCias()){
             System.out.println(c + " ");
         }
 
         System.out.println("");
 
+        // Linhas baixo são para poder testar a classe voo varias escalas
         Geo portoAlegre = new Geo(23,22);
         Geo saoPaulo = new Geo (24, 26);
         Geo amsterdan = new Geo (35,39);
@@ -43,10 +45,6 @@ public class AppAeroporto {
         vooTeste.addRota(destino);
 
         System.out.print (vooTeste);
-
-        /*System.out.print("Código c1: " + c1.getCodigo());
-        System.out.print("Nome c2: " + c2.getNome());
-        System.out.print("c3: " + c3.toString());*/
 
     }
 
