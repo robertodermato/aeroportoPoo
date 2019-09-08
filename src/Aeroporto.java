@@ -23,6 +23,6 @@ public class Aeroporto {
 
     @Override
     public String toString(){
-        return "Código Aeroporto: " + codigo + " Nome Aeroporto: " + nome + " Geolocalização: " + loc;
+        return nome + "("+codigo+")"+"\n";
     }
 }

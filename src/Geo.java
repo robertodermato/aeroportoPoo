@@ -15,6 +15,7 @@ public class Geo {
         return longitude;
     }
 
+
     @Override
     public String toString(){
         return "Latitude: " + latitude + " Longitude: "+ longitude + "\n";

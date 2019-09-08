@@ -16,6 +16,6 @@ public class Aeronave {
     }
 
     public String toString(){
-        return "Código: " + codigo + " Descrição: " + descricao;
+        return descricao + "("+codigo+")";
     }
 }
