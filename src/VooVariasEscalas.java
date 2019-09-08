@@ -11,7 +11,7 @@ public class VooVariasEscalas {
     public VooVariasEscalas (LocalDateTime dh){
         //super (dh);
         rotas  = new ArrayList<Rota>();
-        }
+    }
 
     public boolean addRota (Rota escala){
         return rotas.add(escala);
