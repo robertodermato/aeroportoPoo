@@ -10,14 +10,31 @@ public abstract class Voo {
 
     private LocalDateTime datahora;
     // private Duration duracao; - será calculado
-    // private Rota rota; não é mais útil nessa classe
+    private Rota rota; //não é mais útil nessa classe
     private Status status;
+    private double duracao;
 
     public Voo(LocalDateTime datahora) {
         //this.rota = rota;
         this.datahora = datahora;
         //this.duracao = duracao;
         this.status = Status.CONFIRMADO; // default é confirmado
+    }
+
+    public Voo(Rota r1, LocalDateTime datahora, double dur) {
+        //this.rota = rota;
+        this.datahora = datahora;
+        //this.duracao = duracao;
+        this.status = Status.CONFIRMADO; // default é confirmado
+        this.rota = r1;
+        this.duracao = dur;
+    }
+
+    public Voo(Rota r1, double dur) {
+        this.status = Status.CONFIRMADO; // default é confirmado
+        this.rota = r1;
+        this.duracao = dur;
+        this.datahora = LocalDateTime.of(2016, 8, 12, 12, 00);
     }
 
     public abstract Rota getRota();

@@ -32,6 +32,11 @@ public class AppAeroporto {
         Geo amsterdan = new Geo (52,4);
         Geo toquio = new Geo (35, 140);
 
+
+        System.out.println("Testando se o cálculo de distância da rota está certo por método estático classe Geo");
+        double distanciaGeo = Geo.calculaDistancia(portoAlegre, saoPaulo);
+        System.out.println ("Distância entre Porto Alegre e São Paulo: " + distanciaGeo + "km");
+
         Aeroporto portoAlegreAero = new Aeroporto ("POA", "Porto Alegre", portoAlegre);
         Aeroporto saoPauloAero = new Aeroporto ("GRU", "São Paulo", saoPaulo);
         Aeroporto amsterdanAero = new Aeroporto ("AMS" , "Amsterdan", amsterdan);
