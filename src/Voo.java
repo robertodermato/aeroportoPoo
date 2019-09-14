@@ -21,6 +21,7 @@ public abstract class Voo {
         this.status = Status.CONFIRMADO; // default é confirmado
     }
 
+    // Exercício 1 interface
     public Voo(Rota r1, LocalDateTime datahora, double dur) {
         //this.rota = rota;
         this.datahora = datahora;
@@ -30,6 +31,7 @@ public abstract class Voo {
         this.duracao = dur;
     }
 
+    // Exercício 1 interface
     public Voo(Rota r1, double dur) {
         this.status = Status.CONFIRMADO; // default é confirmado
         this.rota = r1;

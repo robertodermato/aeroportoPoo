@@ -79,5 +79,9 @@ public class AppAeroporto {
         GerenciadorVoos gerVoos = new GerenciadorVoos();
         gerVoos.adicionar(vooTeste);
 
+        //Exercício 1 de interface
+        Voo vooTeste1 = new VooDireto(120, datahora, origem); // usando construtor com duraçõa, DataHora e rota
+        Voo vooteste2 = new VooDireto (120, origem); // usando construtor só com duração e rota
+
     }
 }

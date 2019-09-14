@@ -11,6 +11,17 @@ public class VooDireto extends Voo {
         this.rota = rota;
     }
 
+    // Exercicio 1 de interface
+    public VooDireto (double duracao, LocalDateTime dh, Rota rota){
+        super (rota, dh, duracao);
+        this.rota=rota;
+            }
+    // Exercicio 1 de interface
+    public VooDireto (double duracao, Rota rota){
+        super (rota, duracao);
+        this.rota=rota;
+            }
+
     public Rota getRota(){
         return rota;
     }
