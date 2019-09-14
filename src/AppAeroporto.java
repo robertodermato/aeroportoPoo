@@ -17,14 +17,13 @@ public class AppAeroporto {
         cias.inserir(c2);
         cias.inserir(c3);
 
-        /*
+        System.out.println("\n\n");
         // for each das cias
         for (CiaAerea c: cias.getCias()){
             System.out.println(c + " ");
         }
-        */
 
-        System.out.println(" ");
+        System.out.println("Total de empresas: "+CiaAerea.getTotalCias());
 
         // Linhas abaixo são para poder testar a classe VooEscalas
         Geo portoAlegre = new Geo(-30,-51);
