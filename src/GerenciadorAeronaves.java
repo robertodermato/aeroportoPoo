@@ -25,7 +25,7 @@ public class GerenciadorAeronaves {
     }
 
 
-    public ArrayList<Aeronave> listarTodos() {
+    public ArrayList<Aeronave> listarTodas() {
         return cadastroAeronaves;
     }
 

@@ -44,6 +44,14 @@
             return aux;
         }
 
+        public String toString(){
+            String ger = "Cias cadastradas:\n";
+            for (CiaAerea cia: empresas){
+                ger = ger + cia + "\n";
+            }
+            return ger;
+        }
+
     }
 
 
