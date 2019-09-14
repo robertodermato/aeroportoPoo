@@ -1,4 +1,4 @@
-public class Aeronave implements Contavel{
+public class Aeronave implements Contavel, Comparable<Aeronave>{
     private String codigo;
     private String descricao;
     private static int totalAeronaves=0;
@@ -24,5 +24,10 @@ public class Aeronave implements Contavel{
     @Override
     public int getTotal() {
         return totalAeronaves;
+    }
+
+    @Override
+    public int compareTo(Aeronave outra) {
+        return descricao.compareTo(outra.descricao);
     }
 }
