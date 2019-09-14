@@ -32,10 +32,14 @@ public class AppAeroporto {
         Geo amsterdan = new Geo (52,4);
         Geo toquio = new Geo (35, 140);
 
-
-        System.out.println("Testando se o cálculo de distância da rota está certo por método estático classe Geo");
+        // Exercicio 2 do polígrafo de sobrecarga e interface
+        System.out.println("\n\nTestando se o cálculo de distância da rota está certo por método estático classe Geo");
         double distanciaGeo = Geo.calculaDistancia(portoAlegre, saoPaulo);
         System.out.println ("Distância entre Porto Alegre e São Paulo: " + distanciaGeo + "km");
+
+        System.out.println("\n\nTestando se o cálculo de distância da rota está certo por método não estático classe Geo");
+        double distanciaGeonao = portoAlegre.calculaDistancia(saoPaulo);
+        System.out.println ("Distância entre Porto Alegre e São Paulo: " + distanciaGeonao + "km");
 
         Aeroporto portoAlegreAero = new Aeroporto ("POA", "Porto Alegre", portoAlegre);
         Aeroporto saoPauloAero = new Aeroporto ("GRU", "São Paulo", saoPaulo);
@@ -49,7 +53,7 @@ public class AppAeroporto {
         Rota destino = new Rota (c1, amsterdanAero, toquioAero, aviao1);
 
         //Testando se o cálculo de distância e duração da rota está certo
-        System.out.println("Testando se o cálculo de distância e duração da rota está certo");
+        System.out.println("\n\nTestando se o cálculo de distância e duração da rota está certo");
         double distancia = origem.calculaDistancia();
         System.out.println ("Distância entre Porto Alegre e São Paulo: " + distancia + "km");
         double duracao = origem.getDuracao();
