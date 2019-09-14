@@ -1,31 +1,40 @@
 import java.util.ArrayList;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
-public class GerenciadorVoos
-{
-   private ArrayList<Voo> cadastroVoos;
-   
-   public GerenciadorVoos(){
-   cadastroVoos = new ArrayList<Voo>(); 
+public class GerenciadorVoos {
+    private ArrayList<Voo> cadastroVoos;
+
+    public GerenciadorVoos() {
+        cadastroVoos = new ArrayList<Voo>();
     }
-    
-    public void adicionar (Voo voo){
-    cadastroVoos.add (voo);
+
+    public void adicionar(Voo voo) {
+        cadastroVoos.add(voo);
     }
-    
-    public ArrayList<Voo> listarTodos(){
-    return cadastroVoos;
+
+    public ArrayList<Voo> listarTodos() {
+        return cadastroVoos;
     }
-    
-    //public ArrayList<Voo> buscarData (LocalDate data){
-    //ArrayList<Voo> vooPorData = new ArrayList<>();
-    //int k=0;
-    //for (int i=0; i<cadastroVoos.size(); i++){
-    //if (cadastroVoos.get(i).getLocalDate() = data) {vooPorData.add(k)=cadastroVoos.get(i); k++;}
-    //}
-    //return vooPorData;
-    //}
-    // só um comentário
+
+    public ArrayList<Voo> buscarData(LocalDateTime data) {
+        ArrayList<Voo> vooPorData = new ArrayList<Voo>();
+        for (Voo voo : cadastroVoos) {
+            if (voo.getDatahora() == data) {
+                vooPorData.add(voo);
+            }
+        }
+        return vooPorData;
+    }
+
+    public String toString(){
+        String ger = "Voos cadastrados:\n";
+        for (Voo voo: cadastroVoos){
+            ger = ger + voo + "\n";
+        }
+        return ger;
+    }
+
+
 }
 
 
