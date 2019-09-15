@@ -86,5 +86,25 @@ public class AppAeroporto {
         Voo vooTeste1 = new VooDireto(120, datahora, origem); // usando construtor com duraçõa, DataHora e rota
         Voo vooteste2 = new VooDireto (120, origem); // usando construtor só com duração e rota
 
+        //Exercício 1 de polígrafo 4 interfaces
+        GerenciadorRotas gerRotas=  new GerenciadorRotas();
+        gerRotas.adicionar(origem);
+        gerRotas.adicionar(escala);
+        gerRotas.adicionar(destino);
+
+        System.out.println ("\n\nTestando métodos de ordenação do GerenciadorRotas");
+
+        System.out.println ("Rotas ordenadas pelo nome da CiaAerea");
+        gerRotas.ordenaCia();
+        System.out.println (gerRotas);
+
+        System.out.println ("Rotas ordenadas pelo nome do aeroporto de Origem");
+        gerRotas.ordenaOrigem();
+        System.out.println (gerRotas);
+
+        System.out.println ("Rotas ordenadas pelo nome do aeroporto de Origem e se forem iguais pela CiaAerea");
+        gerRotas.ordenaOrigemCia();
+        System.out.println (gerRotas);
+
     }
 }

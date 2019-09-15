@@ -15,7 +15,7 @@ public class GerenciadorRotas {
     public ArrayList<Rota> buscarPorOrigem(Aeroporto origem) {
         ArrayList<Rota> rotasComMesmaOrigem = new ArrayList<Rota>();
         for (Rota rota : cadastroRotas) {
-            if (rota.getOrigem()==origem) rotasComMesmaOrigem.add(rota);
+            if (rota.getOrigem() == origem) rotasComMesmaOrigem.add(rota);
         }
         return rotasComMesmaOrigem;
     }
@@ -29,11 +29,23 @@ public class GerenciadorRotas {
         return cadastroRotas;
     }
 
+    public void ordenaCia() {
+        Collections.sort(cadastroRotas, new ComparatorNomeCiaAerea());
+            }
+
+    public void ordenaOrigem(){
+        Collections.sort(cadastroRotas, new ComparatorNomeAeroportoOrigem());
+    }
+
+    public void ordenaOrigemCia(){
+        Collections.sort(cadastroRotas, new ComparatorNomeAeroportoOrigemNomeCiaAerea());
+    }
+
     @Override
-    public String toString(){
+    public String toString() {
         ordenaNomeCia();
         String ger = "Rotas cadastrados:\n";
-        for (Rota rota: cadastroRotas){
+        for (Rota rota : cadastroRotas) {
             ger = ger + rota + "\n";
         }
         return ger;
