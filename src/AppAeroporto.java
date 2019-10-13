@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 
@@ -24,6 +25,14 @@ public class AppAeroporto {
         }
 
         System.out.println("Total de empresas: "+CiaAerea.getTotalCias());
+
+        //testando leitura do arquivo de Airlines.dat
+        try {
+            cias.carregaDados();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
         // Linhas abaixo são para poder testar a classe VooEscalas
         Geo portoAlegre = new Geo(-30,-51);

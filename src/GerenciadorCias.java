@@ -1,5 +1,11 @@
+    import java.io.IOException;
+    import java.nio.charset.Charset;
+    import java.nio.file.Files;
+    import java.nio.file.Path;
+    import java.nio.file.Paths;
     import java.util.ArrayList;
     import java.util.Comparator;
+    import java.util.Scanner;
 
     public class GerenciadorCias {
         private ArrayList<CiaAerea> empresas;
@@ -43,6 +49,23 @@
             aux.add(cia);
             }
             return aux;
+        }
+
+        public void carregaDados() throws IOException {
+            Path pathAirlines = Paths.get("airlines.dat");
+            try (Scanner sc = new Scanner(Files.newBufferedReader(pathAirlines.getFileName(), Charset.forName("utf8")))) {
+                sc.useDelimiter("[;\n]"); // separadores: ; e nova linha
+                String header = sc.nextLine(); // pula cabeçalho
+                String id, nome;
+                while (sc.hasNext()) {
+                    id = sc.next();
+                    nome = sc.next();
+                    System.out.format("%s - %s%n", id, nome);
+                }
+            }
+            catch (IOException x) {
+                System.err.format("Erro de E/S: %s%n", x);
+            }
         }
 
         public String toString(){
